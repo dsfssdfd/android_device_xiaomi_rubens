@@ -27,9 +27,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6895
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6895.rc
+    fstab.mt6895
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
